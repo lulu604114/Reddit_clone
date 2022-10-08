@@ -1,11 +1,18 @@
-import { Flex, Box } from '@chakra-ui/react'
+import { Flex, Text, Divider } from '@chakra-ui/react'
 
 const OrDivider = () => {
   return (
-   <Flex>
-     <Box as='span'></Box>
-     <Box as='span'>OU</Box>
-     <Box as='span'></Box>
+   <Flex
+     flexDirection='row'
+     alignItems='center'
+     gap='4'>
+     <Divider />
+     <Text
+       as='b'
+       color='gray.300'>
+       OU
+     </Text>
+     <Divider />
    </Flex>
   )
 }
