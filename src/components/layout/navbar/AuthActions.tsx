@@ -1,9 +1,17 @@
 import { Flex } from '@chakra-ui/react'
-import LogInButton from '../../ui/buttons/LogInButton'
-import SignUpButton from '../../ui/buttons/SignUpButton'
+import LogInButton from '../../ui/buttons/auth/LogInButton'
+import SignUpButton from '../../ui/buttons/auth/SignUpButton'
 import AuthModal from '../../ui/modals/auth/AuthModal'
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { auth } from '../../../firebase/clientApp'
 
 const AuthActions = () => {
+  const [ user ] = useAuthState(auth)
+
+  if (user) {
+    return <></>
+  }
+
   return (
     <Flex
       align='center'

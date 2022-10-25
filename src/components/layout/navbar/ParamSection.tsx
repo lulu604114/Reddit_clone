@@ -1,12 +1,9 @@
 import { Flex } from '@chakra-ui/react'
-import UserDropDown from '../../ui/dropDowns/UserDropDown'
+import UserDropDown from '../../ui/menus/UserDropDown'
 
 const ParamSection = () => {
   return (
-    <Flex
-      align='center'
-      ml='2'
-    >
+    <Flex align='center'>
       <UserDropDown />
     </Flex>
   )

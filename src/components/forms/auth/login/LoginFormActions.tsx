@@ -1,8 +1,17 @@
 import { Button } from '@chakra-ui/react'
 
-const LoginFormActions = () => {
+interface Props {
+  loading: boolean
+}
+
+const LoginFormActions = ({ loading }: Props) => {
   return (
-    <Button variant='solid'>
+    <Button
+      variant='solid'
+      type='submit'
+      isLoading={loading}
+      loadingText='Connexion...'
+    >
       Se connecter
     </Button>
   )

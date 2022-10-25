@@ -7,7 +7,6 @@ const SearchBar = () => {
       height='100%'
       align='center'
       flexGrow='1'
-      mx='5'
     >
       <SearchInput />
     </Flex>

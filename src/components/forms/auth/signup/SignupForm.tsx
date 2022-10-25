@@ -5,14 +5,14 @@ import SignupFormFields from './SignupFormFields'
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth'
 import { auth } from '../../../../firebase/clientApp'
 import { Text } from '@chakra-ui/react'
-import { FIREBASE_ERRORS } from '../../../../firebase/errors'
 import OauthButtons from '../../../auth/oauth/OauthButtons'
 import OrDivider from '../../../ui/dividers/OrDivider'
+import useGetFirebaseError from '../../../../hooks/useGetFirebaseError'
 
 const SignupForm = () => {
   const [
     createUserWithEmailAndPassword,
-    user,
+    ,
     loading,
     createUserError,
   ] = useCreateUserWithEmailAndPassword(auth);
@@ -21,6 +21,7 @@ const SignupForm = () => {
     password: '',
     confirmPassword: ''
   })
+  const [ getFirebaseError ] = useGetFirebaseError()
   const [ errors, setErrors ] = useState<string>('')
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -44,19 +45,20 @@ const SignupForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      {errors || createUserError && (
-        <Text
-          fontSize='sm'
-          color='tomato'
-          mb='3'>
-          {errors || FIREBASE_ERRORS[createUserError.message as keyof typeof FIREBASE_ERRORS]}
-        </Text>
-      )}
       <Flex
         flexDirection='column'
         gap='3'
         width='280px'
       >
+        {errors || createUserError && (
+          <Text
+            textAlign='center'
+            fontSize='sm'
+            color='tomato'
+          >
+            {errors || getFirebaseError(createUserError)}
+          </Text>
+        )}
         <OauthButtons/>
         <OrDivider />
         <SignupFormFields onChange={handleChange}/>

@@ -1,6 +1,6 @@
-import { ComponentStyleConfig } from '@chakra-ui/theme'
+import { defineStyleConfig } from '@chakra-ui/react'
 
-const Button: ComponentStyleConfig = {
+const Button = defineStyleConfig({
   baseStyle: {
     borderRadius: '9999px',
     fontSize: '10pt',
@@ -36,8 +36,34 @@ const Button: ComponentStyleConfig = {
       _hover: {
         bg: 'gray.50'
       }
+    },
+    square: {
+      borderRadius: '5px',
+      _hover: {
+        bg: 'gray.100'
+      }
+    },
+    dropDown: {
+      px: {
+        base: 2,
+          lg: 2,
+          xl: 3
+      },
+      borderColor:'white',
+      color:'gray.500',
+      borderRadius:'5px',
+      _hover: {
+        bgColor: 'white',
+        border: '1px solid',
+        borderColor: 'gray.100'
+      },
+      _active: {
+        bgColor: 'white',
+        border: '1px solid',
+        borderColor: 'gray.100'
+      }
     }
   }
-}
+})
 
 export default Button
