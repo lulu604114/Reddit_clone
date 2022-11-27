@@ -1,20 +1,26 @@
 import { MenuItem } from '@chakra-ui/menu'
 import { VscAdd } from 'react-icons/vsc'
+import CreateCommunityModal from '../../modals/community/CreateCommunityModal'
+import { useSetRecoilState } from 'recoil'
+import { createCommunityModalState } from '../../../../store/atoms/ModalState'
 
 const CreateCommunityMenuItems = () => {
+  const setOpen = useSetRecoilState(createCommunityModalState)
+
+  const handleClick = () => {
+    setOpen(true)
+  }
+
   return (
-    <MenuItem
-      icon={<VscAdd />}
-      fontSize='13'
-      sx={{
-        '& > .chakra-menu__icon-wrapper': {
-          display: 'flex',
-          fontSize: '20'
-        }
-      }}
-    >
-      Create Community
-    </MenuItem>
+    <>
+      <CreateCommunityModal  />
+      <MenuItem
+        icon={<VscAdd />}
+        onClick={handleClick}
+      >
+        Create Community
+      </MenuItem>
+    </>
   )
 }
 

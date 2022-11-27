@@ -37,7 +37,6 @@ const LoginForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <Flex
-        width='280px'
         flexDirection='column'
         gap='3'>
         {error && (

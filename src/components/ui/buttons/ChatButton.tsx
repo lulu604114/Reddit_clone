@@ -6,9 +6,8 @@ const ChatButton = () => {
     <IconButton
       aria-label='Open the chat'
       icon={<BsChatDots />}
-      variant='square'
+      variant='squareIcon'
       size='sm'
-      fontSize='20'
     />
   )
 }

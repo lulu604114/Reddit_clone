@@ -1,6 +1,5 @@
 import { AuthModalViews } from '../../../../models/types/AuthModalViews'
-import { Flex } from '@chakra-ui/react'
-import AuthModalBgImage from './AuthModalBgImage'
+import { Box } from '@chakra-ui/react'
 import Signup from '../../../auth/signup'
 import Login from '../../../auth/login'
 
@@ -10,15 +9,10 @@ interface Props {
 
 const AuthModalContent = ({ view }: Props) => {
   return (
-    <Flex height='100%'>
-      <AuthModalBgImage />
-      <Flex
-        align='center'
-      >
-        {view === 'login' && <Login />}
-        {view === 'singUp' && <Signup />}
-      </Flex>
-    </Flex>
+    <Box width='280px'>
+      {view === 'login' && <Login />}
+      {view === 'singUp' && <Signup />}
+    </Box>
   )
 }
 

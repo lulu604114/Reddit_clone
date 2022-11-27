@@ -1,6 +1,6 @@
 import { Button } from '@chakra-ui/react'
 import { useSetRecoilState } from 'recoil'
-import authModalState from '../../../../store/atoms/AuthModalState'
+import { authModalState } from '../../../../store/atoms/ModalState'
 
 const LogInButton = () => {
   const setAuthModalState = useSetRecoilState(authModalState)
@@ -17,7 +17,7 @@ const LogInButton = () => {
     <Button
       variant='outline'
       onClick={handleClick}
-      height='28px'
+      height='30px'
     >
       Se connecter
     </Button>

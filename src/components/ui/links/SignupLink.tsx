@@ -1,9 +1,9 @@
 import { Link } from '@chakra-ui/react'
 import { useSetRecoilState } from 'recoil'
-import AuthModalState from '../../../store/atoms/AuthModalState'
+import { authModalState } from '../../../store/atoms/ModalState'
 
 const SignupLink = () => {
-  const setAuthModalState = useSetRecoilState(AuthModalState)
+  const setAuthModalState = useSetRecoilState(authModalState)
 
   const handleClick = () => {
     setAuthModalState(state => ({

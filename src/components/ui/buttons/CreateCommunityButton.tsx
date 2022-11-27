@@ -6,9 +6,8 @@ const CreateCommunityButton = () => {
     <IconButton
       aria-label='Create a new community'
       icon={<VscAdd />}
-      variant='square'
+      variant='squareIcon'
       size='sm'
-      fontSize='20'
     />
   )
 }

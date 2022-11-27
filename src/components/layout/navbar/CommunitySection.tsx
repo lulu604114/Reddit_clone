@@ -1,10 +1,10 @@
 import { Flex } from '@chakra-ui/react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth } from '../../../firebase/clientApp'
-import CommunityDropDown from '../../ui/menus/CommunityDropDown'
+import CommunityMenu from '../../ui/menus/CommunityMenu'
 
 const CommunitySection = () => {
-  const user = useAuthState(auth)
+  const [ user ] = useAuthState(auth)
 
   if (!user) {
     return <></>
@@ -12,7 +12,7 @@ const CommunitySection = () => {
 
   return (
     <Flex align='center'>
-      <CommunityDropDown />
+      <CommunityMenu />
     </Flex>
   )
 }

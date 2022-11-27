@@ -6,9 +6,8 @@ const FilterPostButton = () => {
     <IconButton
       aria-label='Filter posts'
       icon={<BsFilterCircle />}
-      variant='square'
+      variant='squareIcon'
       size='sm'
-      fontSize='20'
     />
   )
 }

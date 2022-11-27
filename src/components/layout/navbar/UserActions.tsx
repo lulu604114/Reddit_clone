@@ -9,7 +9,7 @@ import AddVideo from '../../ui/buttons/AddVideo'
 import NotificationsButton from '../../ui/buttons/NotificationsButton'
 
 const UserActions = () => {
-  const user = useAuthState(auth)
+  const [ user ] = useAuthState(auth)
 
   if (!user) {
     return <></>
@@ -17,13 +17,13 @@ const UserActions = () => {
 
   return (
     <Flex align='center'>
-      <Flex gap='2'>
+      <Flex gap='2' >
         <Flex
           className='left_icons'
           gap='2'
           display={{
             base: 'none',
-            lg: 'flex'
+            xl: 'flex'
           }}
         >
           <PopularButton />
@@ -35,7 +35,7 @@ const UserActions = () => {
           height='8'
           display={{
             base: 'none',
-            lg: 'block'
+            xl: 'block'
           }}
         >
           <Divider orientation='vertical'></Divider>

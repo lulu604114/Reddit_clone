@@ -48,7 +48,6 @@ const SignupForm = () => {
       <Flex
         flexDirection='column'
         gap='3'
-        width='280px'
       >
         {errors || createUserError && (
           <Text

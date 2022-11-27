@@ -1,5 +1,5 @@
 import { useRecoilState } from 'recoil'
-import authModalState from '../../../../store/atoms/AuthModalState'
+import { authModalState } from '../../../../store/atoms/ModalState'
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay } from '@chakra-ui/modal'
 import AuthModalContent from './AuthModalContent'
 
@@ -17,16 +17,17 @@ const AuthModal = () => {
     <Modal
       isOpen={open}
       onClose={handleClose}
-      size='4xl'
       isCentered
+      size='sm'
     >
       <ModalOverlay />
-      <ModalContent
-        height='80%'
-        overflow='hidden'
-      >
+      <ModalContent height='75vh'>
         <ModalCloseButton />
-        <ModalBody padding='0'>
+        <ModalBody
+          display='flex'
+          justifyContent='center'
+          alignItems='center'
+        >
           <AuthModalContent view={view} />
         </ModalBody>
       </ModalContent>

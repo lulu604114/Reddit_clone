@@ -18,7 +18,7 @@ const CommunitySelected = () => {
         color='blackAlpha.800'
         display={{
           base: 'none',
-          lg: 'block'
+          xl: 'block'
         }}
       >
         Home

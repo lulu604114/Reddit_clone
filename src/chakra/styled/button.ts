@@ -37,11 +37,12 @@ const Button = defineStyleConfig({
         bg: 'gray.50'
       }
     },
-    square: {
+    squareIcon: {
       borderRadius: '5px',
       _hover: {
         bg: 'gray.100'
-      }
+      },
+      fontSize: '20'
     },
     dropDown: {
       px: {
@@ -49,9 +50,9 @@ const Button = defineStyleConfig({
           lg: 2,
           xl: 3
       },
-      borderColor:'white',
-      color:'gray.500',
-      borderRadius:'5px',
+      borderColor: 'white',
+      color: 'gray.500',
+      borderRadius: '5px',
       _hover: {
         bgColor: 'white',
         border: '1px solid',

@@ -20,7 +20,7 @@ const MainLogo = () => {
           height='18px'
           display={{
             base: 'none',
-            md: 'unset'
+            lg: 'unset'
           }}
           alt={'reddit_title'}
         />

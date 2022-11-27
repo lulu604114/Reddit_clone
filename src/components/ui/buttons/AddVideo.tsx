@@ -6,9 +6,8 @@ const AddVideo = () => {
     <IconButton
       aria-label='Add a video'
       icon={<IoVideocamOutline />}
-      variant='square'
+      variant='squareIcon'
       size='sm'
-      fontSize='20'
     />
   )
 }

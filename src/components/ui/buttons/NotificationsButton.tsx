@@ -6,9 +6,8 @@ const NotificationsButton = () => {
     <IconButton
       aria-label='Add a video'
       icon={<IoNotificationsOutline />}
-      variant='square'
+      variant='squareIcon'
       size='sm'
-      fontSize='20'
     />
   )
 }

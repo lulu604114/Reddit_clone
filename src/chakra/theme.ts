@@ -4,6 +4,7 @@ import '@fontsource/open-sans/400.css'
 import '@fontsource/open-sans/700.css'
 import Button from './styled/button'
 import Input from './styled/input'
+import Menu from './styled/menu'
 
 const theme = extendTheme({
   colors: {
@@ -23,7 +24,8 @@ const theme = extendTheme({
   },
   components: {
     Button,
-    Input
+    Input,
+    Menu
   }
 })
 

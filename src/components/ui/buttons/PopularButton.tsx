@@ -6,9 +6,8 @@ const PopularButton = () => {
     <IconButton
       aria-label='Most popular post'
       icon={<BsArrowUpRightCircle />}
-      variant='square'
+      variant='squareIcon'
       size='sm'
-      fontSize='20'
     />
   )
 }

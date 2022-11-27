@@ -1,10 +1,10 @@
-import { Box, Text, Heading, Link } from '@chakra-ui/react'
+import { Text, Heading, Link } from '@chakra-ui/react'
 import LoginForm from '../../forms/auth/login/LoginForm'
 import SignupLink from '../../ui/links/SignupLink'
 
 const Login = () => {
   return (
-    <Box padding='5'>
+    <>
       <Heading
         as='h1'
         size='sm'
@@ -31,7 +31,7 @@ const Login = () => {
       >
         Première fois sur Reddit ? <SignupLink />
       </Text>
-    </Box>
+    </>
   )
 }
 

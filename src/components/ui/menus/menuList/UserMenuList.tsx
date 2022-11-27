@@ -1,7 +1,7 @@
 import { MenuDivider, MenuList } from '@chakra-ui/menu'
 import AuthActionsMenuItem from '../menuItems/AuthActionsMenuItem'
 
-const UserDropDownMenu = () => {
+const UserMenuList = () => {
   return (
     <MenuList width='260px'>
       <MenuDivider />
@@ -10,5 +10,5 @@ const UserDropDownMenu = () => {
   )
 }
 
-export default UserDropDownMenu
+export default UserMenuList
 

@@ -22,7 +22,7 @@ const AuthActions = () => {
       }}
       display={{
         base: 'none',
-        md: 'flex'
+        lg: 'flex'
       }}
     >
       <AuthModal />

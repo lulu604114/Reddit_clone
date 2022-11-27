@@ -9,7 +9,6 @@ const SignupFormActions = ({ loading }: Props) => {
     <Button
       type='submit'
       variant='solid'
-      colorScheme='blue'
       size='md'
       isLoading={loading}
       loadingText='Submitting'
